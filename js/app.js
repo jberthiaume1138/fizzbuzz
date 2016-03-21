@@ -1,31 +1,37 @@
 $(document).ready(function() {
  
 	var myArray = new Array()
- 	for (var i = 1; i <= 10; i++) {
+ 	for (var i = 1; i <= 15; i++) {
  		myArray.push(i); //generates the array 1-10
- 		// console.log(i);
+ 		
+ 		var fizzTest = i % 3;
+ 		
+ 		// if (i % 3 == 0) {
+ 		// 	//Fizz, but test for Buzz before moving on
+ 		//  	if (i % 5 == 0) {
+ 		//  		//FizzBuzz
+ 		//  		$('.numbers').append('<li>' + i + ' FizzBuzz</li>');
+ 		//  	}
+ 		//  	else
+ 		//  		//Fizz only
+ 		//  		$('.numbers').append('<li>' + i + ' Fizz</li>');
 
- 		var test = i % 3;
- 		// console.log(i,test);
+ 		// }
+ 		// else if (i % 5 == 0) {
+ 		// 	//Buzz only
+ 		// 	$('.numbers').append('<li>' + i + ' Buzz</li>');
+ 		// }
+ 		// else 
+ 		// 	$('.numbers').append('<li>' + i + '</li>');
 
- 		if (test == 0) {
- 		 	$('.numbers').append('<li>' + i + ' fizz</li>');
+
+
+ 		if (i % 3 != 0 && i % 5 !=0) 
+ 		{
+ 			// niether
+			$('.numbers').append('<li>' + i + '</li>'); 			
  		}
- 		else
- 			$('.numbers').append('<li>' + i + '</li>');
-
-
-
-
-
-
-
- 		// // else if (5)
-
- 		// // else
-
- 		//  $('.numbers').append('<li>' + i + '</li>');
-
+ 		
 
     };
 
