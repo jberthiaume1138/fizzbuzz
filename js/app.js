@@ -1,47 +1,59 @@
 document.getElementById("btn-go").addEventListener("click",function(event) {
-	var endPoint = document.getElementById("input-number").value;
+	var endPoint = parseInt(document.getElementById("input-number").value,10);
 	console.log("my endpoint is " + endPoint);
-	fizzBuzz(endPoint);
+	//fizzBuzz(endPoint);
+	if(isNaN(endPoint)){
+		console.log("Bad input. endPoint is " + endPoint);
+		alert("you must enter an intger value!");
+	}
+	else {
+		console.log("success. endPoint = " + endPoint);
+		fizzBuzz(endPoint);
+	}
+
+
+	
 });
 
 document.getElementById("input-number").addEventListener("keydown",function(event) {
 	if (event.keyCode == 13) {
-		var endPoint = this.value;
-		console.log(endPoint);
+		// console.log(this.value);
+		var endPoint = parseInt(document.getElementById("input-number").value,10);
+		console.log("the endPoint with ENTER is " + endPoint);
 		fizzBuzz(endPoint);
 	}
 });
 
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
-	// var myArray = new Array();
-	var endPoint;
+// 	// var myArray = new Array();
+// 	var endPoint;
 	
-	// $('#btn-go').on('click',function() {
-	// 	endPoint=$('#input-number').val().trim();
-	// 	var myEndPoint = document.getElementById("input-number").value;
-	// 	console.log("my endpoint is" + myEndPoint);
-	// 	fizzBuzz(endPoint);
-	// });
+// 	// $('#btn-go').on('click',function() {
+// 	// 	endPoint=$('#input-number').val().trim();
+// 	// 	var myEndPoint = document.getElementById("input-number").value;
+// 	// 	console.log("my endpoint is" + myEndPoint);
+// 	// 	fizzBuzz(endPoint);
+// 	// });
 
 
-	//rewrite this with straight javascript only
-	// var myEndPoint = document.getElementById('#input-number');
-	// console.log(myEndPoint);
-	// document.getElementById('#btn-go').onclick
+// 	//rewrite this with straight javascript only
+// 	// var myEndPoint = document.getElementById('#input-number');
+// 	// console.log(myEndPoint);
+// 	// document.getElementById('#btn-go').onclick
 
-	// ----- end get value from box
+// 	// ----- end get value from box
 
-	// $('#input-number').keydown(function(e) {
-	// 	if (e.keyCode == 13) {
-	//  		endPoint = $('#input-number').val().trim();
-	//  		fizzBuzz(endPoint);
-	// 	}
-	// });
+// 	// $('#input-number').keydown(function(e) {
+// 	// 	if (e.keyCode == 13) {
+// 	//  		endPoint = $('#input-number').val().trim();
+// 	//  		fizzBuzz(endPoint);
+// 	// 	}
+// 	// });
 
-	//rewrite this with straight javascript only
-});
+// 	//rewrite this with straight javascript only
+// });
 
 
 
