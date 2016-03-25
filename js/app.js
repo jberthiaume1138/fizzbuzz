@@ -20,41 +20,40 @@ function validateInput(endPoint) {
 };
 
 function fizzBuzz(endPoint) {
-	var list = document.getElementById("numbers");
-	list.value = "";
-	// document.getElementById("numbers").value = "";
+	var numbers = document.getElementById("numbers");
+	numbers.value = "";
 	var myArray = new Array();
     for (var i = 1; i <= endPoint; i++) {
-		myArray.push(i); //generates the array 1 -  var end
-		// console.log (endPoint);
+		myArray.push(i); 
 		if ((i % 3 == 0) | (i % 5 == 0)) {	// either
 			if (i % 3 == 0 && i % 5 == 0) { // both - FizzBuzz
-				// $('#numbers').append('<li>FizzBuzz</li>');
-				list.innerHTML += '<li>FizzBuzz</li>';
-				console.log(list);
+				numbers.innerHTML += '<li>FizzBuzz</li>';
 	 		}
 	 		else if (i % 3 == 0) {	//Fizz
-	 			$('#numbers').append('<li>Fizz</li>');
-	 			}
-	 			else if (i % 5 == 0) {	//Buzz
-	 				$('#numbers').append('<li>Buzz</li>');
-	 			}
+	 			numbers.innerHTML += '<li>Fizz</li>';
 	 		}
-	 		else { // niether
-	 			$('#numbers').append('<li>' + i + '</li>'); 
+	 		else if (i % 5 == 0) {	//Buzz
+	 			numbers.innerHTML += '<li>Buzz</li>';
 	 		}
+	 	}
+	 	else { // niether
+	 		numbers.innerHTML += '<li>' + i + '</li>';
 
-	 		// get UL, .value += <li>i or text</li>
+	 	}
+
 
 // ---------------------------
 
-	 		if (i%3 === 0) {
-	 			//fizz
-	 		}
-	 		if (i%5 === 5) {
-	 			//buzz
-	 		}
-	 	}
+	 		// if (i%3 === 0) {
+	 		// 	//fizz
+	 		// }
+	 		// if (i%5 === 5) {
+	 		// 	//buzz
+	 		// }
+
+
+	 		
+	 } // close the for loop
 
 	 	// there are more efficient ways 
 };
