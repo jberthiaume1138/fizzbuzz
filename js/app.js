@@ -20,19 +20,21 @@ function validateInput(endPoint) {
 };
 
 function fizzBuzz(endPoint) {
-		document.getElementById("numbers").value = "";
-		// $('#numbers').empty(); 		//reset the list 
-		var myArray = new Array();
-    	for (var i = 1; i <= endPoint; i++) {
-	 		myArray.push(i); //generates the array 1 -  var end
-			// console.log (endPoint);
-	 		if ((i % 3 == 0) | (i % 5 == 0)) {	// either
-	 			if (i % 3 == 0 && i % 5 == 0) { // both - FizzBuzz
-	 				$('#numbers').append('<li>FizzBuzz</li>');
-	 				// re-write with javascript
-	 			}
-	 			else if (i % 3 == 0) {	//Fizz
-	 				$('#numbers').append('<li>Fizz</li>');
+	var list = document.getElementById("numbers");
+	list.value = "";
+	// document.getElementById("numbers").value = "";
+	var myArray = new Array();
+    for (var i = 1; i <= endPoint; i++) {
+		myArray.push(i); //generates the array 1 -  var end
+		// console.log (endPoint);
+		if ((i % 3 == 0) | (i % 5 == 0)) {	// either
+			if (i % 3 == 0 && i % 5 == 0) { // both - FizzBuzz
+				// $('#numbers').append('<li>FizzBuzz</li>');
+				list.innerHTML += '<li>FizzBuzz</li>';
+				console.log(list);
+	 		}
+	 		else if (i % 3 == 0) {	//Fizz
+	 			$('#numbers').append('<li>Fizz</li>');
 	 			}
 	 			else if (i % 5 == 0) {	//Buzz
 	 				$('#numbers').append('<li>Buzz</li>');
@@ -41,6 +43,8 @@ function fizzBuzz(endPoint) {
 	 		else { // niether
 	 			$('#numbers').append('<li>' + i + '</li>'); 
 	 		}
+
+	 		// get UL, .value += <li>i or text</li>
 
 // ---------------------------
 
