@@ -13,6 +13,7 @@ function validateInput(endPoint) {
 	if (isNaN(endPoint)) {
 		alert("you must enter an integer value! Try again.");
 		document.getElementById("input-number").value = "";
+		document.getElementById("numbers").innerHTML = "";
 	}
 	else {
 		return endPoint;
@@ -21,41 +22,23 @@ function validateInput(endPoint) {
 
 function fizzBuzz(endPoint) {
 	var numbers = document.getElementById("numbers");
-	numbers.value = "";
+	numbers.innerHTML = "";
 	var myArray = new Array();
     for (var i = 1; i <= endPoint; i++) {
 		myArray.push(i); 
-		if ((i % 3 == 0) | (i % 5 == 0)) {	// either
-			if (i % 3 == 0 && i % 5 == 0) { // both - FizzBuzz
-				numbers.innerHTML += '<li>FizzBuzz</li>';
-	 		}
-	 		else if (i % 3 == 0) {	//Fizz
-	 			numbers.innerHTML += '<li>Fizz</li>';
-	 		}
-	 		else if (i % 5 == 0) {	//Buzz
-	 			numbers.innerHTML += '<li>Buzz</li>';
-	 		}
+		if ((i % 3 === 0) && (i % 5  === 0)) {
+	 		numbers.innerHTML += '<li>FizzBuzz</li>';
 	 	}
-	 	else { // niether
+	 	else if (i % 3 === 0) {
+	 		numbers.innerHTML += '<li>Fizz</li>';
+	 	}
+	 	else if (i % 5 === 0) {
+	 		numbers.innerHTML += '<li>Buzz</li>';
+	 	}
+	 	else {
 	 		numbers.innerHTML += '<li>' + i + '</li>';
-
 	 	}
-
-
-// ---------------------------
-
-	 		// if (i%3 === 0) {
-	 		// 	//fizz
-	 		// }
-	 		// if (i%5 === 5) {
-	 		// 	//buzz
-	 		// }
-
-
-	 		
-	 } // close the for loop
-
-	 	// there are more efficient ways 
+	 } 
 };
 
 
